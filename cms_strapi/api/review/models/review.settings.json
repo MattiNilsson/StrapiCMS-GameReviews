@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "Review",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Username": {
+      "type": "string"
+    },
+    "Review": {
+      "type": "richtext"
+    },
+    "Rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 1,
+      "default": 1
+    },
+    "game": {
+      "model": "game",
+      "via": "reviews"
+    },
+    "user": {
+      "via": "reviews",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

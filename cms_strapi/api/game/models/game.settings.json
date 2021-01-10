@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "name": "Game",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Publisher": {
+      "type": "string"
+    },
+    "Genre": {
+      "type": "json"
+    },
+    "Cover": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "ReleaseDate": {
+      "type": "date"
+    },
+    "reviews": {
+      "via": "game",
+      "collection": "review"
+    }
+  }
+}
