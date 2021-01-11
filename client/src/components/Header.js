@@ -8,7 +8,8 @@ const Wrapper = styled.header`
     width: 100vw;
     height: 75px;
     background-color: rgb(27, 27, 27);
-    border-bottom: 10px solid rgb(34, 51, 98);
+    border-bottom: 2px solid rgb(25, 76, 218);
+    box-shadow: 0 1px 10px rgb(25, 76, 218);
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +18,11 @@ const Wrapper = styled.header`
     h1{
         color: white;
         margin-left: 20px;
+        text-shadow: 2px 2px black;
+        transition: all 0.2s ease-out;
+    }
+    h1:hover{
+        color: gray;
     }
     .flex{
         margin-right: 20px;

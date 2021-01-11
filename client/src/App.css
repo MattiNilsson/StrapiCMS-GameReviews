@@ -43,3 +43,7 @@ body{
   color: white;
   font-family: 'PT Sans', sans-serif;
 }
+
+button{
+  cursor: pointer;
+}

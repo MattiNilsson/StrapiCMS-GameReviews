@@ -5,11 +5,13 @@ import axios from "axios";
 const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
-    background-color: rgba(25,25,25,0.8);
+    background-color: rgba(25,25,25,0.2);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
+    animation: blur 0.3s ease-out forwards;
+    opacity: 0;
     .container{
         width: 50vw;
         height: 500px;
@@ -23,6 +25,7 @@ const Wrapper = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-shadow: 5px 5px 10px black;
     }
     textarea{
         min-width: 33vw;
@@ -48,6 +51,13 @@ const Wrapper = styled.div`
         margin-top: 20px;
         position: relative;
     }
+
+	@keyframes blur{
+		to{
+            backdrop-filter: blur(2px) grayscale(1);
+            opacity: 1;
+		}
+	}
 `
 
 export default function EditModal(props){

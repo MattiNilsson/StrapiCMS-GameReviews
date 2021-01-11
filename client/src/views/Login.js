@@ -67,6 +67,7 @@ export default function Registrer(){
         newData[e.target.name] = e.target.value;
         setData(newData);
     }
+    
     const doStuff = (e) => {
         e.preventDefault();
 

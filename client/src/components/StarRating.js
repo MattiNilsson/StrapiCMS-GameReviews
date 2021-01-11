@@ -13,9 +13,10 @@ const Wrapper = styled.div`
     .true{
         width: 20px;
         height: 20px;
-        border: 1px solid rgb(34, 51, 98);
+        border: 1px solid rgb(25, 76, 218);
         border-radius: 50%;
-        background-color:rgb(34, 51, 98);
+        background-color:rgb(25, 76, 218);
+        box-shadow: 0 0 5px rgb(25, 76, 218);
     }
     .false{
         width: 20px;

@@ -38,7 +38,7 @@ export default function Home(){
     useEffect(() => {
         const polling = setTimeout(() => {
             axios
-            .get("http://localhost:1337/games?_where[Title_contains]=" + search)
+            .get(`http://localhost:1337/games?_where[_or][0][Title_contains]=${search}&_where[_or][1][Genre_contains]=${search}`)
             .then((res) => {
                 setGames(res.data);
             })
@@ -53,7 +53,9 @@ export default function Home(){
     const searchChange = (e) => {
         setSearch(e.target.value);
     }
-    console.log(games);
+
+    console.log(games)
+
     return(
         <Wrapper>
             <h1>Games</h1>
